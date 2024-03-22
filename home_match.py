@@ -6,7 +6,7 @@ from langchain.text_splitter import CharacterTextSplitter
 
 from utils import create_db, get_llm, get_history
 
-OPENAI_API_KEY='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'
+OPENAI_API_KEY=''
 
 
 def sim_search(query, db, llm):
