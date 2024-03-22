@@ -61,29 +61,6 @@ def get_llm():
     return llm
 
 
-def get_memory(questions, answers):
-
-    history = ChatMessageHistory()
-    history.add_user_message(
-        f"""
-        You are AI that will enrich the desrciptions for home 
-        listings for a user based on their answers to personal 
-        questions.The augmentation should personalize the listing 
-        without changing factual information. 
-        Ask user {len(questions)} questions
-        """
-    )
-    for i in range(len(questions)):
-        history.add_ai_message(questions[i])
-        history.add_user_message(answers[i])
-    conversational_memory = MementoBufferMemory(
-        chat_memory=history,
-        memory_key="questions_and_answers"
-    )
-    return conversational_memory
-
-
-
 def get_history(questions, answers):
     history = ChatMessageHistory()
     history.add_user_message(
