@@ -13,7 +13,7 @@ from typing import Any, Dict, Optional, Tuple
 from langchain.chains.question_answering import load_qa_chain
 
 
-OPENAI_API_KEY='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'
+OPENAI_API_KEY=''
 
 
 class MementoBufferMemory(ConversationBufferMemory):
